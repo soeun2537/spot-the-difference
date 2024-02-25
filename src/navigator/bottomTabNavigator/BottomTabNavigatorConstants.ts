@@ -1,7 +1,8 @@
 import React from "react";
-import Image from "../screens/Image";
-import Game from "../screens/Game";
-import Avatar from "../screens/Avatar";
+import Image from "../../screens/Image";
+import Game from "../../screens/Game";
+import Avatar from "../../screens/Avatar";
+import GameStackNavigator from "../gameStackNavigator/GameStackNavigator";
 
 export type TabsProps = {
   name: string;
@@ -21,7 +22,7 @@ export const TABS: TabsProps[] = [
   },
   {
     name: "게임",
-    component: Game,
+    component: GameStackNavigator,
     icon: "game-controller",
     iconOutline: "game-controller-outline",
     title: "틀린그림찾기 게임을 해봐요!"

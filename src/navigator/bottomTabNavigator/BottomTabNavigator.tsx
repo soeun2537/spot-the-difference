@@ -1,12 +1,12 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Ionicons } from "@expo/vector-icons";
-import { colors } from "../styles/colors";
-import { TABS } from "./NavigatorConstants";
+import { colors } from "../../styles/colors";
+import { TABS } from "./BottomTabNavigatorConstants";
 
 const Tab = createBottomTabNavigator();
 
-const Navigator = () => {
+const BottomTabNavigator = () => {
   return (
     <Tab.Navigator
       initialRouteName="Image"
@@ -44,4 +44,4 @@ const Navigator = () => {
   );
 };
 
-export default Navigator;
+export default BottomTabNavigator;
