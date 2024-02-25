@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { AVATAR_URLS } from "../constants";
 
-export function useAvatarSelect<T>() {
+export function useAvatarSelect() {
   const avatarArray = Object.keys(AVATAR_URLS);
   const [currentAvatarIndex, setCurrentAvatarIndex] = useState(0);
 

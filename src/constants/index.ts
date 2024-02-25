@@ -2,6 +2,10 @@ export const ICON_URLS = {
   clearButton: require("../../assets/images/clearButton.png"),
   leftArrow: require("../../assets/images/leftArrow.png"),
   rightArrow: require("../../assets/images/rightArrow.png"),
+  completeStar: require("../../assets/images/completeStar.png"),
+  completeShadowStar: require("../../assets/images/completeShadowStar.png"),
+  incompleteStar: require("../../assets/images/incompleteStar.png"),
+  incompleteShadowStar: require("../../assets/images/incompleteShadowStar.png"),
 };
 
 export const IMAGE_URLS = [
