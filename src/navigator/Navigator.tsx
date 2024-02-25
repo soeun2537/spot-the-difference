@@ -16,9 +16,14 @@ const Navigator = () => {
         headerStyle: {
           backgroundColor: colors.Primary,
         },
+        tabBarLabelStyle: {
+          fontSize: 12,
+          fontWeight: "bold",
+          marginBottom: 3,
+        },
       }}
     >
-      {TABS.map(({ name, component, icon, iconOutline }) => (
+      {TABS.map(({ name, component, icon, iconOutline, title }) => (
         <Tab.Screen
           key={name}
           name={name}
@@ -31,6 +36,7 @@ const Navigator = () => {
                 color={color}
               />
             ),
+            headerTitle: title,
           }}
         />
       ))}
