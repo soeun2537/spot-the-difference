@@ -21,7 +21,7 @@ const AvatarModule = ({
         height={50}
         onPress={onLeftArrowClick}
       />
-      <AvatarImageViewer avatarName={avatarName} />
+      <AvatarImageViewer top={30} avatarName={avatarName} />
       <IconButton
         iconName={"rightArrow"}
         width={50}
