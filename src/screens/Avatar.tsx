@@ -8,7 +8,6 @@ import { useAvatarSave } from "../hooks/useAvatarSave";
 const Avatar = () => {
   const { handleLeftArrowClick, handleRightArrowClick, currentAvatarName } =
     useAvatarSelect();
-
   const { handleAvatarSave } = useAvatarSave(currentAvatarName);
 
   return (

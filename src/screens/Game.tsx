@@ -2,11 +2,11 @@ import { ScrollView } from "react-native";
 import { PageContainer } from "../components/layout/PageContainer";
 import StarButtonViewer from "../components/ImageViewer/starButtonViewer/StarButtonViewer";
 
-const Game = () => {
+const Game = ({ navigation: { navigate } }) => {
   return (
     <ScrollView>
       <PageContainer>
-        <StarButtonViewer />
+        <StarButtonViewer onPress={() => navigate("SpotTheDifference")} />
       </PageContainer>
     </ScrollView>
   );

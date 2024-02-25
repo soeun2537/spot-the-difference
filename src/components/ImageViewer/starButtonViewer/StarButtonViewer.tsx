@@ -7,9 +7,8 @@ import { iconData } from "../../../storage/dataStorage";
 import { useAvatarLoad } from "../../../hooks/useAvatarLoad";
 import { findIsCompleteById } from "../../../hooks/useFindisCompleteById";
 
-const StarButtonViewer = () => {
+const StarButtonViewer = ({ onPress }) => {
   const iconOrder = iconData.slice(0);
-
   const { savedAvatar, HandleAvatarLoad } = useAvatarLoad();
 
   useEffect(() => {
@@ -20,7 +19,7 @@ const StarButtonViewer = () => {
 
   return (
     <S.StageContainer>
-      {iconOrder.map(({ id, isComplete }, index) => (
+      {iconOrder.map(({ id, isComplete }) => (
         <S.ButtonContainer key={id}>
           {findIsCompleteById(id) === "current" && (
             <AvatarImageViewer top={30} avatarName={savedAvatar} />
@@ -33,9 +32,7 @@ const StarButtonViewer = () => {
             }
             width={60}
             height={60}
-            onPress={() => {
-              console.log(`Button ${index + 1} is pressed.`); //수정
-            }}
+            onPress={findIsCompleteById(id) === "current" ? onPress : () => {}}
           />
           <Text style={{ fontWeight: "500" }}>{`${id}단계`}</Text>
         </S.ButtonContainer>
