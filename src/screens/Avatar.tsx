@@ -1,12 +1,16 @@
 import { PageContainer } from "../components/layout/PageContainer";
-import Col from "../components/layout/Col";
 import AvatarModule from "../components/module/avatarModule/AvatarModule";
 import RoundButton from "../components/button/roundButton/RoundButton";
+import Col from "../components/layout/Col";
 import { useAvatarSelect } from "../hooks/useAvatarSelect";
+import { useAvatarSave } from "../hooks/useAvatarSave";
 
 const Avatar = () => {
   const { handleLeftArrowClick, handleRightArrowClick, currentAvatarName } =
     useAvatarSelect();
+
+  const { handleAvatarSave } = useAvatarSave(currentAvatarName);
+
   return (
     <PageContainer>
       <AvatarModule
@@ -20,7 +24,7 @@ const Avatar = () => {
         label={"저장"}
         width={120}
         height={40}
-        onPress={() => {}}
+        onPress={handleAvatarSave}
       />
       <Col height={20} />
     </PageContainer>
