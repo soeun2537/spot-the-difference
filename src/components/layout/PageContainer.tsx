@@ -1,9 +1,14 @@
 import styled from "@emotion/native";
 import { colors } from "../../styles/colors";
 
-export const PageContainer = styled.View`
+type PageContainerProps = {
+  margin?: number;
+  children?: React.ReactNode;
+};
+
+const Container = styled.View<PageContainerProps>`
   flex: 1;
-  margin: 10px;
+  margin: ${({ margin }) => `${margin}px`};
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
@@ -11,3 +16,10 @@ export const PageContainer = styled.View`
   border-radius: 20px;
   background-color: ${colors.White};
 `;
+
+export const PageContainer = ({
+  margin = 10,
+  children,
+}: PageContainerProps) => {
+  return <Container margin={margin}>{children}</Container>;
+};
