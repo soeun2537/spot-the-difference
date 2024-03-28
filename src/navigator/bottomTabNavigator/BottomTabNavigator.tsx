@@ -9,13 +9,11 @@ const Tab = createBottomTabNavigator();
 const BottomTabNavigator = () => {
   return (
     <Tab.Navigator
-      initialRouteName="Image"
+      initialRouteName="Home"
       screenOptions={{
         tabBarActiveTintColor: colors.Primary,
         tabBarInactiveTintColor: colors.Gray,
-        headerStyle: {
-          backgroundColor: colors.Primary,
-        },
+        headerStyle: { backgroundColor: colors.Primary },
         tabBarLabelStyle: {
           fontSize: 12,
           fontWeight: "bold",
@@ -37,6 +35,7 @@ const BottomTabNavigator = () => {
               />
             ),
             headerTitle: title,
+            headerShown: name === "홈" ? false : true,
           }}
         />
       ))}
