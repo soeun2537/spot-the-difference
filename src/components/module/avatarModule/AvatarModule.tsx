@@ -1,6 +1,7 @@
 import * as S from "./AvatarModule.style";
 import IconButton from "../../button/iconButton/IconButton";
-import AvatarImageViewer from "../../ImageViewer/avatarImageViewer/AvatarImageViewer";
+import AvatarImageViewer from "../../imageViewer/avatarImageViewer/AvatarImageViewer";
+
 
 export type AvatarModuleProps = {
   avatarName: string;

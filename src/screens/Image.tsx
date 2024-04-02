@@ -1,5 +1,5 @@
 import { PageContainer } from "../components/layout/PageContainer";
-import GridImageViewer from "../components/ImageViewer/gridImageViewer/GridImageViewer";
+import GridImageViewer from "../components/imageViewer/gridImageViewer/GridImageViewer";
 import RoundButton from "../components/button/roundButton/RoundButton";
 
 const Image = () => {
